@@ -1,7 +1,7 @@
 import Home from "./pages/Home.js"
 import Cart from "./pages/Cart.js"
 import StateBuy from "./pages/StateBuy.js"
-import NavBar from "./pages/Cart.js"
+import NavBar from "./components/NavBar.js"
 import {Route, Routes} from "react-router-dom"
 import './App.css';
 
@@ -14,7 +14,6 @@ function App() {
         <Route exact path="/cart" element={<Cart/>}/>
         <Route exact path="/state" element={<StateBuy/>}/>
       </Routes>
-
     </div>
   );
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import {getProfile} from '../redux/actions.js';
-import './CSS/navbar.css';
+import { Link } from 'react-router-dom';
+import '../CSS/navbar.css';
 
 
 
@@ -13,13 +14,15 @@ function Navbar() {
     const credit = useSelector((state) => state.credit)
     
     useEffect(() => {
-        dispatch(getProfile)
-    })
+        dispatch(getProfile())
+    }, [])
 
     return (
         <div className='container-navbar'>
-            <h3> Tienda de productos </h3>
-            <div>
+            <Link to="/">
+                <h3> Tienda de productos </h3>
+            </Link>
+            <div className='profile-navbar'>
                 <h2> {user.firstName} {user.lastName} </h2>
                 {cart.length > 0 ? 
                     <h2> Carrito({cart.length}) </h2> 
