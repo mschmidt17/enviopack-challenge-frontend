@@ -7,7 +7,7 @@ export function getProducts() {
             const json = await axios.get("products.json");
             return dispatch({
                 type: "GET_PRODUCTS",
-                payload: json.data
+                payload: json.data.productos
             })
         } catch (error) {
             console.log(error);
@@ -21,7 +21,7 @@ export function getProfile() {
             const json = await axios.get("profile.json");
             return dispatch({
                 type: "GET_PROFILE",
-                payload: json.data
+                payload: json.data.profile
             })
         } catch (error) {
             console.log(error);

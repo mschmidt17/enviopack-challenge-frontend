@@ -1,0 +1,12 @@
+.container-home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-search-order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}

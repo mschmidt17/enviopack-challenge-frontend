@@ -1,0 +1,13 @@
+.container-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+.profile-navbar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
