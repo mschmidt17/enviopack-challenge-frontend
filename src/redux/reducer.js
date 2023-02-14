@@ -2,6 +2,7 @@
 const initialState = {
     products: [],
     cart: [],
+    profile: {},
     credit: 50000
 };
 
@@ -11,6 +12,12 @@ function reducer(state=initialState, action){
             return{
                 ...state,
                 products: action.payload,
+            }
+
+        case "GET_PROFILE":
+            return{
+                ...state,
+                profile: action.payload,
             }
 
         case "SEARCH_PRODUCT":
@@ -65,7 +72,6 @@ function reducer(state=initialState, action){
                 ...state,
                 credit: state.credit - action.payload
             }
-
 
         default:
             return state;

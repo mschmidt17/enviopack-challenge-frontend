@@ -15,6 +15,20 @@ export function getProducts() {
     }
 };
 
+export function getProfile() {
+    return async function (dispatch) {
+        try {
+            const json = await axios.get("profile.json");
+            return dispatch({
+                type: "GET_PROFILE",
+                payload: json.data
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+
 
 export function searchProduct(name) {
     return async function (dispatch) {
