@@ -17,8 +17,8 @@ function Order() {
     return (
         <div className='container-search'>
             <p> ORDENAR POR</p>
-            <select name="select" onChange={e=> handleOrdenar(e)}>
-                <option value="all" selected>Seleccionar</option>
+            <select name="select" defaultValue="all" onChange={e=> handleOrdenar(e)}>
+                <option value="all" >Seleccionar</option>
                 <option value="low" >Mas baratos</option>
                 <option value="high">Mas caros</option>
             </select>
