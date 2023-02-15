@@ -27,10 +27,10 @@ function Card({product}) {
             <h3> {product.title} </h3>
             <p> ${product.price} </p>
             {!addedToCart ?
-                <button onClick={handleClick}> Agregar al carrito </button>
+                <button className='btn-card' onClick={handleClick}> Agregar al carrito </button>
             :
-                <Link to="/cart">
-                    <button> Ver carrito</button>
+                <Link to="/cart" style={{"textDecoration":"none"}}>
+                    <button className='btn-card'> Ver carrito</button>
                 </Link>
             }
         </div>

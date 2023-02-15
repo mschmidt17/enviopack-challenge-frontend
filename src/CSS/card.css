@@ -11,3 +11,14 @@
     border-radius: 5px;
     box-shadow: 0 1px 3px 3px rgba(128, 128, 128, 0.486);
 }
+
+.btn-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    width: 14rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
