@@ -3,7 +3,8 @@ const initialState = {
     products: [],
     cart: [],
     profile: {},
-    credit: 50000
+    credit: 50000,
+    stateBuy: true,
 };
 
 function reducer(state=initialState, action){
@@ -12,6 +13,7 @@ function reducer(state=initialState, action){
             return{
                 ...state,
                 products: action.payload,
+                searchProduct: action.payload,
             }
 
         case "GET_PROFILE":
@@ -23,7 +25,11 @@ function reducer(state=initialState, action){
         case "SEARCH_PRODUCT":
             return{
                 ...state,
-                products: state.products.filter((e) => e.includes(action.payload) )
+                products: [...state.products].filter((e) => {
+                    const namesProducts = e.title.toUpperCase();
+                    if (namesProducts.includes(action.payload.toUpperCase())) return namesProducts;
+                })
+                
             }
 
         case "ORDER_BY_PRICE":
@@ -58,19 +64,28 @@ function reducer(state=initialState, action){
         case "ADD_TO_CART":
             return{
                 ...state,
-                cart: [...state, action.payload]
+                cart: [...state.cart, action.payload]
             }
 
         case "DELETE_FROM_CART":
             return{
                 ...state,
-                cart: state.cart.filter((e) => e != action.payload)
+                cart: [...state.cart].filter((e) => e.id !== action.payload)
             }
 
         case "BUY_PRODUCT":
-            return{
-                ...state,
-                credit: state.credit - action.payload
+            if (state.credit - action.payload >= 0) {
+                return{
+                    ...state,
+                    credit: state.credit - action.payload,
+                    stateBuy: true,
+                    cart: []
+                }
+            } else {
+                return{
+                    ...state,
+                    stateBuy: false,
+                }
             }
 
         default:
