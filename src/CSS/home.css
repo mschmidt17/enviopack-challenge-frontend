@@ -6,9 +6,16 @@
 
 .home-search-order{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    width: 55%;
+    width: 54%;
+}
+
+.container-home-cards-pagination{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container-productCards{
@@ -16,5 +23,6 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 1% 0;
     width: 55%;
 }
