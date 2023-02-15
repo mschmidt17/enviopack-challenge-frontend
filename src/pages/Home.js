@@ -48,23 +48,31 @@ function Home() {
                 <Search/>
                 <Order/>
             </div>
-            <div className='container-productCards'>
-                {currentProducts.map((p) => {
-                    return(
-                        <Card product={p} key={p.id}/>
-                    )
-                })}
-            </div>
 
-            <div className='renderPages'>    
-                <button className='btnPages' onClick={e => handlePrev(e)}  disabled={currentPage === 1 ? true : false}> ◄ </button>    
-                <Pagination
-                    productsPerPage = {productsPerPage}
-                    allProducts = {products.length}
-                    paginado = {paginado}
-                />
-                <button className='btnPages' onClick={e => handleNext(e)} disabled={currentPage === 4 ? true : false} > ► </button>
+            {currentProducts.length > 0 ?
+            <div className='container-home-cards-pagination'>
+                <div className='container-productCards'>
+                    {currentProducts.map((p) => {
+                        return(
+                            <Card product={p} key={p.id}/>
+                        )
+                    })}
+                </div>
+                <div className='renderPages'>    
+                    <button className='btnPages' onClick={e => handlePrev(e)}  disabled={currentPage === 1 ? true : false}> ◄ </button>    
+                    <Pagination
+                        productsPerPage = {productsPerPage}
+                        allProducts = {products.length}
+                        paginado = {paginado}
+                    />
+                    <button className='btnPages' onClick={e => handleNext(e)} disabled={currentPage === 4 ? true : false} > ► </button>
+                </div>
             </div>
+            :
+                <div className='container-productCards'>
+                    <h3>No se han encontrado productos para esa búsqueda</h3>
+                </div>
+            }
 
         </div>
     );

@@ -1,0 +1,22 @@
+.container-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0%;
+}
+
+.ul-pagination{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 20rem;
+    margin: 0;
+    padding: 0%;
+}
+
+.pageButton{
+    cursor: pointer;
+}
+

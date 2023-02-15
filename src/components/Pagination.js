@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import "../CSS/pagination.css"
 
 
 function Pagination({ productsPerPage, allProducts, paginado }) {
