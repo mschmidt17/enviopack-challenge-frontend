@@ -1,7 +1,7 @@
 import { React, useState, useEffect} from "react";
 import {getProducts, searchProduct} from '../redux/actions.js';
 import { useDispatch, useSelector } from "react-redux";
-// import './CSS/search.css';
+import '../CSS/search.css';
 
 
 
@@ -16,9 +16,12 @@ function Search() {
     }
     
     useEffect(() => {
-        if(name.length > 1){
+        if(name.length > 1 && products.length >= 1){
             dispatch(searchProduct(name));
             console.log("name", name)
+        } else if (products.length < 1) {
+            setName("")
+            dispatch(getProducts());
         } else {
             dispatch(getProducts());
         }
@@ -33,6 +36,7 @@ function Search() {
                 value={name}
                 placeholder='Buscar productos por nombre'
                 onChange={(e) => handleInputChange(e)} 
+                className="input-search"
                 />
             </div> 
         </div>
