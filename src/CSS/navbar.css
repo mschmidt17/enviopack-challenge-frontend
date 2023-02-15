@@ -3,11 +3,24 @@
     align-items: center;
     justify-content: space-between;
     background-color: black;
+    padding: 0 1%;
+}
+
+.container-navbar h2 {
+    font-size: 1.2rem;
     color: white;
 }
+
 
 .profile-navbar{
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
+    align-items: center;
+    width: 34%;
+}
+
+.profile-navbar h3 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: white;
 }

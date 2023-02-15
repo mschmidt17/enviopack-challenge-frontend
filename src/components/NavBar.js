@@ -19,17 +19,15 @@ function Navbar() {
 
     return (
         <div className='container-navbar'>
-            <Link to="/">
-                <h3> Tienda de productos </h3>
+            <Link to="/" style={{"textDecoration":"none"}}>
+                <h2> Tienda de productos </h2>
             </Link>
             <div className='profile-navbar'>
-                <h2> {user.firstName} {user.lastName} </h2>
-                {cart.length > 0 ? 
+                <h3> {user.firstName} {user.lastName} </h3>
+                <Link to="/cart" style={{"textDecoration":"none"}}>
                     <h2> Carrito({cart.length}) </h2> 
-                : 
-                    <h2> Carrito </h2>
-                }
-                <h2> Crédito $ {credit} </h2>
+                </Link>
+                <h3> Crédito $ {credit} </h3>
             </div>
         </div>
     );
