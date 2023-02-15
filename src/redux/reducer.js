@@ -30,7 +30,7 @@ function reducer(state=initialState, action){
             if(action.payload === 'all') {
                 return {
                     ...state,
-                   products:[...state.products]
+                   products: [...state.products].sort(() =>{return Math.random() -0.5})
                 }
             }
             if (action.payload === "low") {
