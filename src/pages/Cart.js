@@ -66,9 +66,9 @@ function Cart() {
                     </div>
                 </div>
             :
-                <div className='cartCards-container'>
+                <div className='cart-card-empty'>
                     <p> Aún no se han agregado productos</p>
-                    <Link to="/"> <button> Volver al catálogo </button> </Link>
+                    <Link to="/" style={{"textDecoration":"none"}}> <button className='btn-cart-buy'> Volver al catálogo </button> </Link>
                 </div>
             }
 

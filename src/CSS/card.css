@@ -5,9 +5,9 @@
     flex-direction: column;
     width: 16rem;
     height: 20rem;
-    margin: 1% 0;
+    margin: 1% 1%;
     padding: 2% 1% 2% 1%;
-    border: 1px solid grey;
+    border: 1.5px solid rgba(128, 128, 128, 0.514);
     border-radius: 5px;
     box-shadow: 0 1px 10px 1px rgba(128, 128, 128, 0.418);
 }

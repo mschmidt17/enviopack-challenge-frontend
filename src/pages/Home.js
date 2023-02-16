@@ -64,6 +64,7 @@ function Home() {
                         productsPerPage = {productsPerPage}
                         allProducts = {products.length}
                         paginado = {paginado}
+                        currentPage = {currentPage}
                     />
                     <button className='btnPages' onClick={e => handleNext(e)} disabled={currentPage === 4 ? true : false} > ► </button>
                 </div>

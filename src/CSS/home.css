@@ -16,15 +16,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 58%;
 }
 
 .container-productCards{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
     flex-wrap: wrap;
     margin: 1% 0 4% 0;
-    width: 55%;
 }
 
 .renderPages{
@@ -35,4 +35,7 @@
 
 .btnPages{
     cursor: pointer;
+    background-color: white;
+    border-radius: 2px;
+    border: none;
 }

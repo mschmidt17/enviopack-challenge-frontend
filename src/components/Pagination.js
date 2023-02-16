@@ -2,7 +2,7 @@ import React from 'react';
 import "../CSS/pagination.css"
 
 
-function Pagination({ productsPerPage, allProducts, paginado }) {
+function Pagination({ productsPerPage, allProducts, paginado, currentPage }) {
     
     const page = [];
     for (let i = 0; i < Math.ceil(allProducts/productsPerPage); i++) {
@@ -15,7 +15,8 @@ function Pagination({ productsPerPage, allProducts, paginado }) {
                 {page.length > 1 && page.map((number) => {
                     return (
                         <li className="pages" key={number}>
-                            <button className='pageButton' onClick={() => paginado(number)} >{number}</button>
+                            {console.log(currentPage, number)}
+                            <button className={`pageButton ${currentPage === number ? 'active': "" }`} onClick={() => paginado(number)} >{number}</button>
                         </li>
                     )
                 })}

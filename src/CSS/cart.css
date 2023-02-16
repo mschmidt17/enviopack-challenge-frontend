@@ -17,7 +17,7 @@
     width: 100%;
 }
 
-.cart-card, .cart-total{
+.cart-card, .cart-total, .cart-card-empty{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,4 +83,9 @@
 
 .btn-cart-buy:hover{
     background-color: rgba(0, 0, 0, 0.836);
+}
+
+.cart-card-empty{
+    flex-direction: column;
+    padding-bottom: 1%;
 }
