@@ -23,13 +23,14 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 1% 0;
+    margin: 1% 0 4% 0;
     width: 55%;
 }
 
 .renderPages{
     display: flex;
     align-items: center;
+    margin-bottom: 5%;
 }
 
 .btnPages{
