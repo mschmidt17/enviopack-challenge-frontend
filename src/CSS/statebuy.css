@@ -1,0 +1,38 @@
+.container-state{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.statebuy-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    height: 7rem;
+    border: 1px solid rgba(128, 128, 128, 0.37);
+    border-radius: 5px;
+    box-shadow: 0 1px 10px 1px rgba(128, 128, 128, 0.418);
+    margin: 1.4%;
+   
+}
+
+.title-state{
+    font-size: 3rem;
+}
+
+.state-important{
+    display: flex;
+
+}
+
+.back-btn-state{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.918);
+    width: 26rem;
+    height: 1.6rem;
+    border-radius: 3px;
+    cursor: pointer;
+}

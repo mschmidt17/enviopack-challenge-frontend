@@ -13,7 +13,6 @@ function reducer(state=initialState, action){
             return{
                 ...state,
                 products: action.payload,
-                searchProduct: action.payload,
             }
 
         case "GET_PROFILE":
@@ -29,7 +28,6 @@ function reducer(state=initialState, action){
                     const namesProducts = e.title.toUpperCase();
                     if (namesProducts.includes(action.payload.toUpperCase())) return namesProducts;
                 })
-                
             }
 
         case "ORDER_BY_PRICE":
