@@ -58,16 +58,21 @@ function Home() {
                         )
                     })}
                 </div>
-                <div className='renderPages'>    
-                    <button className='btnPages' onClick={e => handlePrev(e)}  disabled={currentPage === 1 ? true : false}> ◄ </button>    
-                    <Pagination
-                        productsPerPage = {productsPerPage}
-                        allProducts = {products.length}
-                        paginado = {paginado}
-                        currentPage = {currentPage}
-                    />
-                    <button className='btnPages' onClick={e => handleNext(e)} disabled={currentPage === 4 ? true : false} > ► </button>
-                </div>
+
+                {
+                    products.length < 6 ? null
+                    :
+                    <div className='renderPages'>    
+                        <button className='btnPages' onClick={e => handlePrev(e)}  disabled={currentPage === 1 ? true : false}> ◄ </button>    
+                        <Pagination
+                            productsPerPage = {productsPerPage}
+                            allProducts = {products.length}
+                            paginado = {paginado}
+                            currentPage = {currentPage}
+                        />
+                        <button className='btnPages' onClick={e => handleNext(e)} disabled={currentPage === 4 ? true : false} > ► </button>
+                    </div>
+                }
             </div>
             :
                 <div className='container-productCards'>
